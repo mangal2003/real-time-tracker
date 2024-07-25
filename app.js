@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const path = require("path");
+const port = process.env.PORT || 3000;
 
 const http = require("http");
 const socketio = require("socket.io");
@@ -23,4 +24,4 @@ app.get("/", function (req, res) {
   res.render("index");
 });
 
-server.listen(3000);
+server.listen(port);
